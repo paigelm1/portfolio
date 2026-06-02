@@ -64,7 +64,7 @@ export default function SocialsPage() {
       {/* honorable mention */}
       <section className="py-14 flex flex-col items-center gap-6 px-10">
         <h2 className="text-xl font-bold tracking-wide">honorable mention:</h2>
-        <p className="text-neutral-400 tracking-wide">accidentally going viral on my personal</p>
+        <p className="text-neutral-400 tracking-wide">went viral on my personal acct</p>
         <a
           href="https://www.instagram.com/reel/DSWU42BDkbX/"
           target="_blank"
