@@ -25,7 +25,7 @@ export default function Home() {
           <span className="text-white text-2xl font-light tracking-wide">
             big
           </span>
-          <h1 className="font-anton text-[17vw] leading-none text-white uppercase tracking-tight">
+          <h1 className="font-anton text-[17vw] sm:text-[17vw] leading-none text-white uppercase tracking-tight">
             marketer
           </h1>
           <p className="text-white italic text-lg tracking-[0.3em] uppercase mt-1">
@@ -35,21 +35,41 @@ export default function Home() {
       </section>
 
       {/* ── wyd? section ── */}
-      <section id="wyd" className="relative bg-white min-h-screen">
-        {/* "wyd?" background text */}
+
+      {/* Mobile layout */}
+      <section id="wyd" className="md:hidden bg-white py-12 px-6">
+        <h2 className="font-barlow italic font-extrabold text-[18vw] text-center mb-8 leading-none">wyd?</h2>
+        <div className="grid grid-cols-2 gap-6 justify-items-center">
+          {folders.map((f) => {
+            const inner = (
+              <>
+                <FolderIcon size={100} />
+                <span className="text-[13px] font-medium text-neutral-800 text-center leading-snug whitespace-pre-line mt-1">
+                  {f.label}
+                </span>
+              </>
+            );
+            return f.external ? (
+              <a key={f.href} href={f.href} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-1">
+                {inner}
+              </a>
+            ) : (
+              <Link key={f.href} href={f.href} className="flex flex-col items-center gap-1">
+                {inner}
+              </Link>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* Desktop layout */}
+      <section className="hidden md:block relative bg-white min-h-screen">
         <span
           className="absolute font-barlow italic font-extrabold leading-none text-black pointer-events-none select-none"
-          style={{
-            fontSize: "10vw",
-            left: "50%",
-            top: "44%",
-            transform: "translate(-50%, -50%)",
-          }}
+          style={{ fontSize: "10vw", left: "50%", top: "44%", transform: "translate(-50%, -50%)" }}
         >
           wyd?
         </span>
-
-        {/* Folder links */}
         {folders.map((f) => {
           const className = "absolute flex flex-col items-center gap-1.5 group w-[150px]";
           const inner = (

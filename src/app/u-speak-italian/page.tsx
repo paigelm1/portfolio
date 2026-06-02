@@ -18,14 +18,14 @@ export default function USpeakItalianPage() {
       </div>
 
       {/* Section 1: Italy text + photo */}
-      <section className="flex items-center justify-between max-w-4xl mx-auto px-12 pb-24 gap-16">
-        <div className="flex flex-col gap-4">
+      <section className="flex flex-col md:flex-row items-center justify-between max-w-4xl mx-auto px-6 md:px-12 pb-16 md:pb-24 gap-8 md:gap-16">
+        <div className="flex flex-col gap-4 text-center md:text-left">
           <p className="text-xl font-bold">I lived in Italy for 18 months</p>
           <p className="font-bold text-sm text-center leading-snug">
             teaching people about how to<br />find joy through Christ!
           </p>
         </div>
-        <div className="w-[480px] h-[480px] flex-shrink-0 rounded-lg overflow-hidden">
+        <div className="w-full max-w-[480px] md:w-[480px] md:h-[480px] aspect-square flex-shrink-0 rounded-lg overflow-hidden">
           <Image
             src="/u-speak-italian/italy-photo.jpg"
             alt="Italy"
@@ -37,15 +37,15 @@ export default function USpeakItalianPage() {
       </section>
 
       {/* Section 2: BYU classes */}
-      <section className="text-center py-16 px-12">
+      <section className="text-center py-10 md:py-16 px-6 md:px-12">
         <p className="text-xl font-bold leading-snug">
           came back to the states &amp; took some<br />advanced Italian classes at BYU
         </p>
       </section>
 
       {/* Section 3: Teaching photo + text */}
-      <section className="flex items-center justify-between max-w-4xl mx-auto px-12 py-16 gap-16">
-        <div className="w-[480px] h-[480px] flex-shrink-0 rounded-lg overflow-hidden">
+      <section className="flex flex-col-reverse md:flex-row items-center justify-between max-w-4xl mx-auto px-6 md:px-12 py-10 md:py-16 gap-8 md:gap-16">
+        <div className="w-full max-w-[480px] md:w-[480px] md:h-[480px] aspect-square flex-shrink-0 rounded-lg overflow-hidden">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/u-speak-italian/teaching-photo.jpg"

@@ -39,9 +39,9 @@ export default function CaseCompsPage() {
       </div>
 
       {/* Photo + annotation */}
-      <div className="flex justify-center w-full">
-      <div className="relative flex items-center gap-8">
-        <div className="w-[650px] h-[540px] flex-shrink-0 rounded-lg overflow-hidden">
+      <div className="flex justify-center w-full px-6">
+      <div className="relative flex flex-col md:flex-row items-center gap-8">
+        <div className="w-full max-w-[650px] md:w-[650px] md:h-[540px] aspect-square md:aspect-auto flex-shrink-0 rounded-lg overflow-hidden">
           <Image
             src="/case-comps/JPEG image.jpeg"
             alt="Case competition"

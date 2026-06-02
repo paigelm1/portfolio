@@ -11,7 +11,7 @@ export default function HostessPage() {
         </Link>
       </div>
 
-      <div className="flex items-start justify-around pt-12 px-10">
+      <div className="flex flex-col md:flex-row items-center md:items-start justify-around pt-12 px-6 md:px-10 gap-12 md:gap-0">
 
         {/* Left — JFK party */}
         <a href="https://universe.byu.edu/metro/byu-student-hosts-jfk-jr-celebrity-look-alike-contest-in-salt-lake-city" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center group">

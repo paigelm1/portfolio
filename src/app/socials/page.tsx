@@ -32,7 +32,7 @@ export default function SocialsPage() {
       </section>
 
       {/* content creation */}
-      <section className="py-14 px-16 flex items-center gap-20 max-w-3xl mx-auto">
+      <section className="py-14 px-6 md:px-16 flex flex-col md:flex-row items-center gap-10 md:gap-20 max-w-3xl mx-auto">
         <div className="relative flex-shrink-0 w-72 h-96 rounded-2xl overflow-hidden">
           <video
             autoPlay
