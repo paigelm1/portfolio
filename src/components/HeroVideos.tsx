@@ -3,9 +3,9 @@
 import { useState, useEffect } from "react";
 
 const FRAMES = [
-  { left: "/videos/video1.mp4", right: "/videos/video2.mp4" },
-  { left: "/videos/video3.mp4", right: "/videos/video4.mp4" },
-  { left: "/videos/video5.mp4", right: "/videos/video6.mp4" },
+  { left: "/videos/video1.mp4", leftPos: "center", right: "/videos/video2.mp4", rightPos: "left" },
+  { left: "/videos/video3.mp4", leftPos: "center", right: "/videos/video4.mp4", rightPos: "left" },
+  { left: "/videos/video5.mp4", leftPos: "10%",    right: "/videos/video6.mp4", rightPos: "left" },
 ];
 
 export default function HeroVideos() {
@@ -22,7 +22,7 @@ export default function HeroVideos() {
     <>
       {/* Left side */}
       <div className="relative w-1/2 h-full">
-        {FRAMES.map(({ left }, i) => (
+        {FRAMES.map(({ left, leftPos }, i) => (
           <video
             key={`left-${i}`}
             autoPlay
@@ -30,7 +30,7 @@ export default function HeroVideos() {
             loop
             playsInline
             className="absolute inset-0 w-full h-full object-cover transition-none"
-            style={{ zIndex: i === frame ? 10 : 0 }}
+            style={{ zIndex: i === frame ? 10 : 0, objectPosition: leftPos }}
           >
             <source src={left} type="video/mp4" />
           </video>
