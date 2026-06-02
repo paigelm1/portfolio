@@ -8,18 +8,15 @@ export default function AutoPlayMusic() {
     if (localStorage.getItem("hasVisited")) return;
     localStorage.setItem("hasVisited", "true");
 
+    let iframe: HTMLIFrameElement | null = null;
+
     const play = () => {
-      const iframe = document.createElement("iframe");
-      iframe.src =
-        "https://www.youtube.com/embed/CZXLLMbJdZ4?autoplay=1&mute=0";
+      iframe = document.createElement("iframe");
+      iframe.src = "https://www.youtube.com/embed/CZXLLMbJdZ4?autoplay=1&mute=0";
       iframe.allow = "autoplay; encrypted-media";
       iframe.style.cssText =
         "position:fixed;bottom:0;right:0;width:1px;height:1px;opacity:0.01;border:none;pointer-events:none;";
       document.body.appendChild(iframe);
-
-      window.removeEventListener("click", play);
-      window.removeEventListener("scroll", play);
-      window.removeEventListener("touchstart", play);
     };
 
     window.addEventListener("click", play, { once: true });
@@ -27,6 +24,7 @@ export default function AutoPlayMusic() {
     window.addEventListener("touchstart", play, { once: true });
 
     return () => {
+      if (iframe) iframe.remove();
       window.removeEventListener("click", play);
       window.removeEventListener("scroll", play);
       window.removeEventListener("touchstart", play);
