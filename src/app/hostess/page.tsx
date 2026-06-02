@@ -1,21 +1,44 @@
 import Link from "next/link";
-import FolderIcon from "@/components/FolderIcon";
 
 export const metadata = { title: "Hostess" };
 
 export default function HostessPage() {
   return (
-    <main className="min-h-screen bg-white px-12 py-10">
-      <Link href="/#wyd" className="text-sm text-neutral-400 hover:text-neutral-800 transition-colors">
-        ← back
-      </Link>
-      <div className="mt-10 flex flex-col items-start gap-5 max-w-4xl">
-        <FolderIcon size={120} />
-        <h1 className="font-anton text-[72px] leading-none uppercase text-neutral-900">
-          Hostess
-        </h1>
-        <div className="w-full h-px bg-neutral-200" />
-        <p className="text-neutral-400 text-sm">Content coming soon.</p>
+    <main className="min-h-screen bg-black text-white relative overflow-hidden">
+      <div className="px-10 pt-8">
+        <Link href="/#wyd" className="text-sm text-neutral-500 hover:text-white transition-colors">
+          ← back
+        </Link>
+      </div>
+
+      <div className="flex items-start justify-around pt-12 px-10">
+
+        {/* Left — JFK party */}
+        <a href="https://universe.byu.edu/metro/byu-student-hosts-jfk-jr-celebrity-look-alike-contest-in-salt-lake-city" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center group">
+          <p className="text-[#ff2200] text-2xl font-bold mb-4 text-center">
+            calling all JFK JR&apos;s
+          </p>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/hostess/jfk-photo.png"
+            alt="Calling all JFK JRs"
+            className="w-[420px] group-hover:opacity-80 transition-opacity"
+          />
+        </a>
+
+        {/* Right — Crush party */}
+        <Link href="/hostess/crush-party" className="flex flex-col items-center gap-8 pt-4 group">
+          <div className="border-2 border-purple-500 px-6 py-3">
+            <span className="text-[#ff2200] text-2xl font-bold">crush party</span>
+          </div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/hostess/monkey.png"
+            alt="Crush party"
+            className="w-[560px] group-hover:opacity-80 transition-opacity"
+          />
+        </Link>
+
       </div>
     </main>
   );
