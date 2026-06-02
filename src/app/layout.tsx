@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Anton, Barlow_Condensed } from "next/font/google";
 import "./globals.css";
 import Sparkles from "@/components/Sparkles";
+import FallingStickers from "@/components/FallingStickers";
 
 const anton = Anton({
   weight: "400",
