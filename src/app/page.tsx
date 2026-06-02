@@ -10,6 +10,7 @@ const folders = [
   { label: "hostess",                          href: "/hostess",                                   left: "14%", top: "64%", external: false },
   { label: "u speak\nitalian?",                href: "/u-speak-italian",                           left: "70%", top: "59%", external: false },
   { label: "linkedin",                         href: "https://www.linkedin.com/in/paigemortensen/", left: "33%", top: "10%", external: true  },
+  { label: "photography",                      href: "https://paigemortensen.com",                  left: "55%", top: "75%", external: true  },
 ];
 
 export default function Home() {
