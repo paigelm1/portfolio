@@ -1,6 +1,7 @@
 import Link from "next/link";
 import FolderIcon from "@/components/FolderIcon";
 import HeroVideos from "@/components/HeroVideos";
+import AutoPlayMusic from "@/components/AutoPlayMusic";
 
 const folders = [
   { label: "case competitions\n(don't click)", href: "/case-comps",                               left: "10%", top: "18%", external: false },
@@ -16,6 +17,7 @@ const folders = [
 export default function Home() {
   return (
     <main>
+      <AutoPlayMusic />
       {/* ── Hero ── */}
       <section className="relative h-screen flex overflow-hidden bg-black">
         <HeroVideos />
