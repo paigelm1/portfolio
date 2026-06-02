@@ -1,5 +1,6 @@
 import Link from "next/link";
 import FolderIcon from "@/components/FolderIcon";
+import HeroVideos from "@/components/HeroVideos";
 
 const folders = [
   { label: "case competitions\n(don't click)", href: "/case-comps",                               left: "10%", top: "18%", external: false },
@@ -16,32 +17,10 @@ export default function Home() {
     <main>
       {/* ── Hero ── */}
       <section className="relative h-screen flex overflow-hidden bg-black">
-        <div className="relative w-1/2 h-full">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="w-full h-full object-cover"
-          >
-            <source src="/videos/video1.mp4" type="video/mp4" />
-          </video>
-          <div className="absolute inset-0 bg-black/40" />
-        </div>
-        <div className="w-1/2 h-full">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="w-full h-full object-cover object-left"
-          >
-            <source src="/videos/video2.mp4" type="video/mp4" />
-          </video>
-        </div>
+        <HeroVideos />
 
         {/* Text overlay */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none select-none gap-1">
+        <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none select-none gap-1 z-30">
           <span className="text-white text-2xl font-light tracking-wide">
             big
           </span>
